@@ -7,8 +7,14 @@
 
 ## 🚀 Quick Start (Running Locally)
 
+
+
+Demo of the BLUFF FACT: (https://ornate-sherbet-d6060f.netlify.app/)
+
+
+
 The server is currently running live on your computer at:
-👉 **[http://localhost:3000](http://localhost:3000)**
+👉 **[http://localhost:3000]([http://localhost:3000](https://ornate-sherbet-d6060f.netlify.app/))**
 
 ### How to Test with 2 Players on Your Computer:
 1. Open your browser and go to: **`http://localhost:3000`**
