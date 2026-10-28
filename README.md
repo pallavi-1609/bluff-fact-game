@@ -5,7 +5,7 @@
 
 ---
 
-## 🚀 Quick Start (Running Locally)
+## 🚀 Quick Start (Running through Netlify)
 
 
 
@@ -14,14 +14,14 @@ Demo of the BLUFF FACT: (https://ornate-sherbet-d6060f.netlify.app/)
 
 
 The server is currently running live on your computer at:
-👉 **[http://localhost:3000]([http://localhost:3000](https://ornate-sherbet-d6060f.netlify.app/))**
+👉 **((https://ornate-sherbet-d6060f.netlify.app/))**
 
 ### How to Test with 2 Players on Your Computer:
-1. Open your browser and go to: **`http://localhost:3000`**
+1. Open your browser and go to: **`(https://ornate-sherbet-d6060f.netlify.app/)`**
    - Pick an avatar (e.g. 🦁 Lion), enter nickname **"HostAlice"**, and click **CREATE ROOM**.
    - You'll see a unique 4-letter room code (e.g., `KRN8`) and a "Copy Join Link" button.
 2. Open a **second tab in Incognito / Private Window** (or a second browser window):
-   - Go to **`http://localhost:3000`** (or paste the copied join link).
+   - Go to **`https://ornate-sherbet-d6060f.netlify.app/`** (or paste the copied join link).
    - Pick an avatar (e.g. 🦊 Fox), enter nickname **"PlayerBob"**, enter the 4-letter code, and click **JOIN ROOM**.
 3. In Tab 1 (Host), you will see PlayerBob appear instantly! The **START GAME 🚀** button will turn green and become clickable.
 4. Click **START GAME** and enjoy playing!
@@ -56,7 +56,7 @@ You can share this game publicly on **Render**, **Railway**, **Fly.io**, or **Ne
 
 ### Option 1: Render / Railway (1-Click, Free & Automatic WebSockets)
 1. Push this folder to a GitHub repository.
-2. Go to [render.com](https://render.com) or [railway.app](https://railway.app) (free tier).
+2. Go to [render.com](https://render.com) or [railway.app](https://railway.app) (free tier) or [netflify](https://app.netlify.com/start).
 3. Connect your GitHub repository:
    - **Build Command**: `npm install`
    - **Start Command**: `node server.js`
@@ -64,4 +64,4 @@ You can share this game publicly on **Render**, **Railway**, **Fly.io**, or **Ne
 
 ### Option 2: Local Network Play (Same Wi-Fi)
 - Find your local IP address (`ipconfig` in cmd, e.g. `192.168.1.X`).
-- Anyone connected to your home or campus Wi-Fi can open `http://192.168.1.X:3000` on their phone to play together!
+- Anyone connected to your home or campus Wi-Fi can open `http://192.168.1.X:3000` as a localhost or you can use 'https://ornate-sherbet-d6060f.netlify.app/' on their phone to play together!
