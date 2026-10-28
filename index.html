@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>BLUFF FACT! — Multiplayer Game Show</title>
+  <meta name="description" content="A real-time multiplayer party game where you invent believable lies for bizarre true facts and fool your friends!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Audio & Room Controls -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span class="logo-emoji">⚡</span>
+      <span class="logo-text">BLUFF FACT!</span>
+    </div>
+    <div class="nav-actions">
+      <div id="room-badge" class="room-badge hidden">
+        ROOM: <span id="nav-room-code">----</span>
+      </div>
+      <button id="sound-btn" class="icon-btn" title="Toggle Sound">🔊</button>
+    </div>
+  </header>
+
+  <main class="game-container">
+
+    <!-- SCREEN 1: WELCOME / JOIN -->
+    <section id="screen-welcome" class="game-screen active">
+      <div class="hero-card">
+        <div class="game-badge">PARTY GAME SHOW</div>
+        <h1 class="hero-title">BLUFF<span class="highlight">FACT!</span></h1>
+        <p class="hero-subtitle">Real facts are bizarre. Your lies are genius. Can your friends spot the truth?</p>
+
+        <!-- Player Setup -->
+        <div class="setup-box">
+          <label class="section-label">CHOOSE YOUR AVATAR</label>
+          <div class="avatar-picker" id="avatar-picker">
+            <button type="button" class="avatar-opt selected" data-avatar="🦁">🦁</button>
+            <button type="button" class="avatar-opt" data-avatar="🦊">🦊</button>
+            <button type="button" class="avatar-opt" data-avatar="🐼">🐼</button>
+            <button type="button" class="avatar-opt" data-avatar="🦄">🦄</button>
+            <button type="button" class="avatar-opt" data-avatar="🤖">🤖</button>
+            <button type="button" class="avatar-opt" data-avatar="🐙">🐙</button>
+            <button type="button" class="avatar-opt" data-avatar="🚀">🚀</button>
+            <button type="button" class="avatar-opt" data-avatar="🤠">🤠</button>
+            <button type="button" class="avatar-opt" data-avatar="🐱">🐱</button>
+            <button type="button" class="avatar-opt" data-avatar="🐸">🐸</button>
+          </div>
+
+          <div class="input-group">
+            <label for="player-name-input">YOUR NICKNAME</label>
+            <input type="text" id="player-name-input" maxlength="14" placeholder="e.g. MasterMind" autocomplete="off">
+          </div>
+
+          <!-- Join or Create Tabs -->
+          <div class="action-grid">
+            <div class="action-card create-card">
+              <span class="card-icon">👑</span>
+              <h3>Host New Game</h3>
+              <p>Get a 4-letter room code and invite 2–8 friends.</p>
+              <button id="btn-create-game" class="btn btn-primary btn-block">CREATE ROOM</button>
+            </div>
+
+            <div class="action-card join-card">
+              <span class="card-icon">🎮</span>
+              <h3>Join with Code</h3>
+              <input type="text" id="room-code-input" maxlength="4" placeholder="ROOM CODE" autocomplete="off" class="room-code-field">
+              <button id="btn-join-game" class="btn btn-secondary btn-block">JOIN ROOM</button>
+            </div>
+          </div>
+
+          <div id="welcome-error" class="error-banner hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: LOBBY -->
+    <section id="screen-lobby" class="game-screen">
+      <div class="lobby-card">
+        <div class="lobby-header">
+          <span class="status-pill pulse">WAITING FOR PLAYERS</span>
+          <div class="code-display-box">
+            <div class="code-label">ROOM CODE</div>
+            <div class="huge-code" id="lobby-room-code">----</div>
+            <button id="btn-copy-link" class="btn-copy">📋 Copy Join Link</button>
+          </div>
+          <p class="join-instructions">Open another tab or tell your friends to visit this site and enter the code!</p>
+        </div>
+
+        <div class="roster-section">
+          <div class="roster-header">
+            <h3>PLAYERS IN ROOM (<span id="player-count">0</span>/8)</h3>
+            <span class="min-needed">Need at least 2 players</span>
+          </div>
+          <div class="player-roster" id="player-roster">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <div class="lobby-actions">
+          <div id="host-controls" class="host-controls">
+            <button id="btn-start-game" class="btn btn-primary btn-large btn-block" disabled>
+              START GAME (WAITING FOR PLAYERS)
+            </button>
+          </div>
+          <div id="guest-waiting" class="guest-waiting hidden">
+            <div class="spinner"></div>
+            <p>Waiting for the host to start the game...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: BLUFFING PHASE -->
+    <section id="screen-bluffing" class="game-screen">
+      <div class="phase-container">
+        <div class="phase-header">
+          <div class="round-badge" id="bluff-round-badge">ROUND 1 OF 3</div>
+          <div class="timer-badge" id="bluff-timer">35</div>
+        </div>
+
+        <div class="category-tag" id="bluff-category">🦁 ANIMAL KINGDOM</div>
+
+        <div class="question-card">
+          <p class="question-text" id="bluff-prompt">
+            Loading fact...
+          </p>
+        </div>
+
+        <!-- Bluff submission form -->
+        <div id="bluff-input-area" class="bluff-input-area">
+          <label class="input-label" for="bluff-text-input">WRITE YOUR MOST BELIEVABLE FAKE ANSWER:</label>
+          <div class="input-row">
+            <input type="text" id="bluff-text-input" maxlength="50" placeholder="Type a convincing lie..." autocomplete="off">
+            <button id="btn-submit-bluff" class="btn btn-primary">SUBMIT LIE</button>
+          </div>
+          <div id="bluff-warning" class="error-banner hidden"></div>
+        </div>
+
+        <div id="bluff-waiting-area" class="submitted-notice hidden">
+          <div class="check-icon">✓</div>
+          <h3>Lie Locked In!</h3>
+          <p>Now wait for other players to submit their bluffs...</p>
+          <div class="progress-indicator" id="bluff-submitted-tracker">
+            <!-- Player submission pills -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: VOTING PHASE -->
+    <section id="screen-voting" class="game-screen">
+      <div class="phase-container">
+        <div class="phase-header">
+          <div class="round-badge" id="vote-round-badge">ROUND 1 OF 3</div>
+          <div class="timer-badge" id="vote-timer">25</div>
+        </div>
+
+        <div class="question-card compact">
+          <span class="sub-label">FIND THE ACTUAL TRUTH:</span>
+          <p class="question-text" id="vote-prompt">
+            Loading prompt...
+          </p>
+        </div>
+
+        <div class="voting-grid" id="voting-options-grid">
+          <!-- Dynamically populated buttons -->
+        </div>
+
+        <div id="vote-status-banner" class="vote-status-banner hidden">
+          Vote submitted! Waiting for remaining votes...
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 5: REVEAL & ROUND SUMMARY -->
+    <section id="screen-reveal" class="game-screen">
+      <div class="phase-container">
+        <div class="reveal-header">
+          <div class="round-badge" id="reveal-round-badge">THE REVEAL</div>
+          <div class="timer-badge small" id="reveal-timer">14</div>
+        </div>
+
+        <div class="truth-banner" id="truth-banner">
+          <div class="truth-pill">🌟 THE ACTUAL TRUTH</div>
+          <h2 class="truth-answer" id="reveal-truth-answer">The Answer</h2>
+          <p class="truth-funfact" id="reveal-fun-fact">Fun fact details</p>
+        </div>
+
+        <div class="reveal-options-list" id="reveal-options-list">
+          <!-- Shows each option, who wrote it, and who was tricked -->
+        </div>
+
+        <!-- Round Scoreboard -->
+        <div class="round-leaderboard">
+          <h3>CURRENT STANDINGS</h3>
+          <div class="leaderboard-cards" id="round-leaderboard-cards">
+            <!-- Player standing cards -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 6: PODIUM / GAME OVER -->
+    <section id="screen-podium" class="game-screen">
+      <div class="podium-card">
+        <div class="game-badge">GAME COMPLETED</div>
+        <h1 class="podium-title">FINAL SHOWDOWN</h1>
+
+        <div class="podium-stage" id="podium-stage">
+          <!-- 2nd, 1st, 3rd place pillars -->
+        </div>
+
+        <div class="final-scores-table" id="final-scores-table">
+          <!-- Full list -->
+        </div>
+
+        <div class="podium-actions">
+          <button id="btn-play-again" class="btn btn-primary btn-large btn-block hidden">PLAY AGAIN (HOST)</button>
+          <div id="guest-play-again-msg" class="guest-waiting hidden">Waiting for host to restart...</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="audio.js"></script>
+  <script src="confetti.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

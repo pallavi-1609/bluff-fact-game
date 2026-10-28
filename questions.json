@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "category": "WEIRD LAWS",
+    "prompt": "In Switzerland, it is illegal under animal rights law to own just one ________ because they get lonely.",
+    "answer": "Guinea pig",
+    "synonyms": ["guinea pig", "guineapig", "guinea-pig", "guinea pigs"],
+    "houseBluffs": ["Goldfish", "Parrot", "Hamster"],
+    "funFact": "Because guinea pigs are social herd animals, Swiss law considers owning only one to be animal cruelty! There are even guinea pig matchmaking agencies."
+  },
+  {
+    "id": 2,
+    "category": "ANIMAL KINGDOM",
+    "prompt": "Wombats are the only known animals on Earth whose poop is shaped like a ________.",
+    "answer": "Cube",
+    "synonyms": ["cube", "cubic", "cubes", "box", "square", "dice"],
+    "houseBluffs": ["Cylinder", "Pyramid", "Star"],
+    "funFact": "Wombats produce up to 100 cube-shaped droppings a night; the shape prevents their territorial markers from rolling away down steep hills."
+  },
+  {
+    "id": 3,
+    "category": "HISTORY ODDITIES",
+    "prompt": "In 1932, the Australian military fought an official war against an army of 20,000 ________ and lost.",
+    "answer": "Emus",
+    "synonyms": ["emu", "emus", "emu bird"],
+    "houseBluffs": ["Kangaroos", "Wild boars", "Feral camels"],
+    "funFact": "The Great Emu War involved soldiers armed with Lewis machine guns, but the emus split into small guerrilla bands and evaded the army completely."
+  },
+  {
+    "id": 4,
+    "category": "SPACE & SCIENCE",
+    "prompt": "Astronauts on Apollo 16 reported that Moon dust surprisingly smells like ________.",
+    "answer": "Spent gunpowder",
+    "synonyms": ["gunpowder", "spent gunpowder", "burnt gunpowder", "fireworks"],
+    "houseBluffs": ["Burnt toast", "Old copper coins", "Ozone and sulfur"],
+    "funFact": "Moon dust smells like burned gunpowder after a shooting range, and caused severe allergic reactions called 'lunar hay fever'."
+  },
+  {
+    "id": 5,
+    "category": "FOOD MYSTERIES",
+    "prompt": "Before becoming a popular snack, cotton candy was originally invented in 1897 by a ________.",
+    "answer": "Dentist",
+    "synonyms": ["dentist", "a dentist", "dental surgeon", "orthodontist"],
+    "houseBluffs": ["Funeral director", "Toy maker", "Magician"],
+    "funFact": "Dr. William Morrison, a Nashville dentist, co-invented the machine that melted and spun sugar, calling it 'Fairy Floss'!"
+  },
+  {
+    "id": 6,
+    "category": "ANIMAL KINGDOM",
+    "prompt": "Sea otters hold ________ while sleeping so they do not drift away with the ocean current.",
+    "answer": "Hands",
+    "synonyms": ["hands", "each other's hands", "paws", "their hands", "holding hands"],
+    "houseBluffs": ["Kelp stems", "Smooth pebbles", "Their breath"],
+    "funFact": "They form floating groups called rafts, holding hands and wrapping themselves in giant kelp forests to stay anchored."
+  },
+  {
+    "id": 7,
+    "category": "WEIRD LAWS",
+    "prompt": "In the UK, it is technically illegal under the Metropolitan Police Act to carry a ________ along a sidewalk.",
+    "answer": "Plank of wood",
+    "synonyms": ["plank", "plank of wood", "timber", "wooden plank", "wood board"],
+    "houseBluffs": ["Ladder", "Suitcase on wheels", "Dead fish"],
+    "funFact": "Section 54 of the 1839 Act prohibits carrying large planks, casks, tubs, or hoops on pedestrian walkways unless unloading a cart."
+  },
+  {
+    "id": 8,
+    "category": "POP CULTURE & TECH",
+    "prompt": "The iconic green falling code in 'The Matrix' movie is actually a collection of Japanese ________ recipes.",
+    "answer": "Sushi",
+    "synonyms": ["sushi", "sushi recipes", "sushi roll", "sushi rolls"],
+    "houseBluffs": ["Ramen", "Green tea", "Miso soup"],
+    "funFact": "Production designer Simon Whiteley scanned characters directly from his Japanese wife's favorite sushi cookbooks."
+  },
+  {
+    "id": 9,
+    "category": "ANIMAL KINGDOM",
+    "prompt": "Sloths can hold their breath underwater for up to 40 minutes, which is longer than a ________ can.",
+    "answer": "Dolphin",
+    "synonyms": ["dolphin", "dolphins", "a dolphin"],
+    "houseBluffs": ["Crocodile", "Sea turtle", "Seal"],
+    "funFact": "By slowing their heart rate down to a third of its normal pace, sloths can stay submerged under water up to 4 times longer than dolphins!"
+  },
+  {
+    "id": 10,
+    "category": "BIZARRE HISTORY",
+    "prompt": "In ancient Rome, people frequently used human and animal ________ as a mouthwash to whiten their teeth.",
+    "answer": "Urine",
+    "synonyms": ["urine", "pee", "piss"],
+    "houseBluffs": ["Goat milk", "Crushed pearls", "Wood ash"],
+    "funFact": "The ammonia in aged urine was a powerful cleaning agent. Roman emperors even placed taxes on the collection of public urinal vessels."
+  },
+  {
+    "id": 11,
+    "category": "WORLD RECORDS",
+    "prompt": "The longest cricket match in recorded history lasted for 12 days between England and South Africa, and ended because ________.",
+    "answer": "The team had to catch their boat home",
+    "synonyms": ["boat", "catch their boat", "ship", "catch their ship", "boat home", "ferry"],
+    "houseBluffs": ["They ran out of balls", "The pitch caught fire", "All players got heatstroke"],
+    "funFact": "The 1939 'Timeless Test' reached day 12 when England literally had to dash to the harbour to catch the Union-Castle liner Athlone Castle back to Britain!"
+  },
+  {
+    "id": 12,
+    "category": "SCIENCE & NATURE",
+    "prompt": "Bananas share approximately 50 to 60 percent of their entire DNA sequence with ________.",
+    "answer": "Humans",
+    "synonyms": ["humans", "human", "human beings", "people", "man"],
+    "houseBluffs": ["Mushrooms", "Mosquitoes", "Sunflowers"],
+    "funFact": "Because all living organisms share common ancestors, basic cellular functions like energy production require many of the exact same genes."
+  },
+  {
+    "id": 13,
+    "category": "ANIMAL KINGDOM",
+    "prompt": "Flamingos are not born pink. They get their bright pink color from eating ________.",
+    "answer": "Brine shrimp",
+    "synonyms": ["shrimp", "brine shrimp", "algae and shrimp", "crustaceans"],
+    "houseBluffs": ["Pink coral", "Red beetles", "Berry moss"],
+    "funFact": "Flamingo feathers are naturally greyish-white; the pink pigments come from canthaxanthin carotenoids found in their diet of microscopic algae and brine shrimp."
+  },
+  {
+    "id": 14,
+    "category": "WEIRD LAWS",
+    "prompt": "In Georgia (USA), it is illegal to eat ________ with a fork; you are required by ordinance to eat it with your hands.",
+    "answer": "Fried chicken",
+    "synonyms": ["fried chicken", "chicken", "crispy chicken"],
+    "houseBluffs": ["Watermelon", "Peach cobbler", "Corn on the cob"],
+    "funFact": "In Gainesville, Georgia—the Poultry Capital of the World—a 1961 law declares fried chicken a culinary delicacy that must only be touched with fingers. A 91-year-old tourist was even jokingly 'arrested' in 2009 for using a fork!"
+  },
+  {
+    "id": 15,
+    "category": "SCIENCE & NATURE",
+    "prompt": "A single lightning bolt contains enough energy to toast over 100,000 slices of ________.",
+    "answer": "Bread",
+    "synonyms": ["bread", "toast", "slices of bread"],
+    "houseBluffs": ["Pizza", "Marshmallows", "Bagels"],
+    "funFact": "With over 1 billion Joules of electrical energy per strike, a standard household two-slice toaster could run for decades."
+  },
+  {
+    "id": 16,
+    "category": "FOOD & DRINK",
+    "prompt": "In the 1830s, Heinz ketchup was originally formulated and sold across pharmacies as a medicine to cure ________.",
+    "answer": "Indigestion and diarrhea",
+    "synonyms": ["diarrhea", "indigestion", "stomach ache", "upset stomach", "cholera"],
+    "houseBluffs": ["Baldness", "Gout", "Tooth decay"],
+    "funFact": "Dr. John Cook Bennett added tomatoes to ketchup pills in 1834, claiming tomato extracts could cure liver disorders and indigestion."
+  },
+  {
+    "id": 17,
+    "category": "ANIMAL KINGDOM",
+    "prompt": "Crows have extraordinary memories and can hold a grudge against specific individual human ________ for several years.",
+    "answer": "Faces",
+    "synonyms": ["faces", "face", "human faces", "people's faces"],
+    "houseBluffs": ["Voices", "Scents", "Walking strides"],
+    "funFact": "In university studies, crows remembered the exact mask of a researcher who had captured them, scolded them years later, and taught their offspring to target that face too!"
+  },
+  {
+    "id": 18,
+    "category": "BIZARRE HISTORY",
+    "prompt": "During World War II, the British government created fake carrot propaganda claiming carrots gave pilots supernatural ________.",
+    "answer": "Night vision",
+    "synonyms": ["night vision", "vision in the dark", "night eyesight", "see in the dark"],
+    "houseBluffs": ["Lightning reflexes", "Resistance to cold", "Telepathic intuition"],
+    "funFact": "The British RAF invented this story to keep secret their breakthrough airborne radar technology (AI Mk IV) that was intercepting German night bombers!"
+  },
+  {
+    "id": 19,
+    "category": "SPACE & SCIENCE",
+    "prompt": "If you could fold a standard sheet of paper in half 42 times, the stack would be thick enough to reach the ________.",
+    "answer": "Moon",
+    "synonyms": ["moon", "the moon", "lunar surface"],
+    "houseBluffs": ["Stratosphere", "International Space Station", "Sun"],
+    "funFact": "Due to exponential geometric growth (2^42 ≈ 4.4 trillion layers), a 0.1mm sheet expands to roughly 440,000 kilometers, surpassing the distance to the Moon!"
+  },
+  {
+    "id": 20,
+    "category": "POP CULTURE & GAMING",
+    "prompt": "The creator of Pac-Man, Toru Iwatani, came up with the character's round shape while staring at a ________ with a slice removed.",
+    "answer": "Pizza",
+    "synonyms": ["pizza", "a pizza", "whole pizza", "pepperoni pizza"],
+    "houseBluffs": ["Pie", "Cheese wheel", "Clock"],
+    "funFact": "Iwatani wanted to create an arcade game that wasn't about war or space violence, inspired during lunch by an eight-slice pizza missing one wedge."
+  }
+]
